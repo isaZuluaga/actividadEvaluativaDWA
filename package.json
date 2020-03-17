@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c --watch",
-    "test": "jest"
+    "fixcode": "standard --fix",
+    "test": "jest",
+    "test:watch": "jest --watch --onlyFailures --watchAll --verbose"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,10 @@
     "rollup": "^2.0.5",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-livereload": "^1.0.4",
-    "rollup-plugin-serve": "^1.0.1"
+    "rollup-plugin-serve": "^1.0.1",
+    "standard": "^14.3.3"
+  },
+  "standard": {
+    "env": [ "jest" ]
   }
 }

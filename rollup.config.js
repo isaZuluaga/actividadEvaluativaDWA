@@ -14,8 +14,9 @@ export default {
   plugins: [
     serve({
       open: true,
-      contentBase: 'public',
+      contentBase: 'public'
     }),
+    livereload(),
     resolve(),
     commonjs(),
     babel({
