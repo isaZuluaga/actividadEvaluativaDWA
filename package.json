@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/julianvasquez/createElement.git"
+    "url": "git+https://github.com/isaZuluaga/JSActivity.git"
   },
   "keywords": [],
   "author": "",
   "license": "UNLICENSE",
   "bugs": {
-    "url": "https://github.com/julianvasquez/createElement/issues"
+    "url": "https://github.com/isaZuluaga/JSActivity/issues"
   },
-  "homepage": "https://github.com/julianvasquez/createElement#readme",
+  "homepage": "https://github.com/isaZuluaga/JSActivity#readme",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-transform-runtime": "^7.8.3",
@@ -34,6 +34,11 @@
     "standard": "^14.3.3"
   },
   "standard": {
-    "env": [ "jest" ]
+    "env": [
+      "jest"
+    ]
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.7"
   }
 }
