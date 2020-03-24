@@ -31,56 +31,6 @@ justify-content: center;
 align-items: center;
 }
 
-#myGalleryContainer{
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: 160px 240px;
-  background-color: aquamarine;
-  width: 750px;
-  height: 400px;
-  /* grid-row-gap: 10px;
-  grid-column-gap: 10px; */
-}
-
-.myGalleryElement{
-  background-color: tomato;
-}
-#myGalleryElement1{
-  background-image: url(https://picsum.photos/400/300?random=1);
-}
-#myGalleryElement2{
-  background-image: url(https://picsum.photos/400/300?random=2);
-}
-#myGalleryElement3{
-  grid-column: span 3;
-  background-image: url(https://picsum.photos/400/300?random=3);
-}
-#myGalleryElement4{
-  background-image: url(https://picsum.photos/400/300?random=4);
-}
-#myGalleryElement5{
-  background-image: url(https://picsum.photos/400/300?random=5);
-}
-#myGalleryElement6{
-  grid-column: span 2;
-  background-image: url(https://picsum.photos/400/300?random=6);
-}
-#myGalleryElement7{
-  grid-column: span 3;
-  background-image: url(https://picsum.photos/400/300?random=7);
-}
-#myGalleryElement8{
-  background-image: url(https://picsum.photos/400/300?random=8);
-}
-#myGalleryElement9{
-  grid-column: span 3;
-  background-image: url(https://picsum.photos/400/300?random=9);
-}
-#myGalleryElement10{
-  grid-column: span 2;
-  background-image: url(https://picsum.photos/400/300?random=10);
-}
-
 #mysoatListContainer{
   display: flex;
   justify-content: center;
@@ -111,6 +61,7 @@ mySoatList:nth-child(2n+3) {background: #CCC} */
 }
 
 #myheaderText{
+  font-family: "Comic Sans MS", cursive, sans-serif;
   color: whitesmoke;
   font-size: 0.5em;
 }

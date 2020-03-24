@@ -36,7 +36,13 @@ function peticion() {
   fetch('https://dwaapi.juvasquez88.now.sh/soatdwa').then(function (respuesta) {
     return respuesta.json();
   }).then(function (respuesta) {
-    return console.log(respuesta.vehicles[0]);
+    var vehiclesList = []; // let element = respuesta.vehicles[0]
+
+    for (var i = 1; i <= 5; i++) {
+      vehiclesList[i] = respuesta.vehicles[i];
+    }
+
+    console.log(vehiclesList);
   });
 }
 

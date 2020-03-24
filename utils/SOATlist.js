@@ -40,5 +40,13 @@ export default function addSoatList(){
 export function peticion(){
 fetch('https://dwaapi.juvasquez88.now.sh/soatdwa')
 .then(respuesta => respuesta.json() )
-.then(respuesta => console.log(respuesta.vehicles[0]))
+.then(respuesta => {
+    let vehiclesList =[];
+    // let element = respuesta.vehicles[0]
+    
+    for(let i = 1; i<=5; i++){
+        vehiclesList[i] = respuesta.vehicles[i]
+      }
+      console.log(vehiclesList)
+})
 }
