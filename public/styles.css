@@ -91,7 +91,7 @@ align-items: center;
 #mySoatList{
   list-style: none;
 /* background-color: chartreuse; */
-  width: 100%;
+  width: 1300px;
   height: 40px;
 }
 /* mySoatList:first-child {background: #FF0}
