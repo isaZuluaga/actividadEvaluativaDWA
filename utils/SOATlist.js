@@ -28,7 +28,7 @@ export default function addSoatList(){
   }
 
   export function addSoatListElement(){
-    for(let i = 1; i<=5; i++){
+    for(let i = 0; i<=4; i++){
       var listElement = document.createElement('li');
       listElement.id = 'mylistElement'+ i;
       listElement.className = 'mylistElement';
@@ -43,10 +43,11 @@ fetch('https://dwaapi.juvasquez88.now.sh/soatdwa')
 .then(respuesta => {
     let vehiclesList =[];
     // let element = respuesta.vehicles[0]
-    
-    for(let i = 1; i<=5; i++){
+    for(let i = 0; i<=4; i++){
         vehiclesList[i] = respuesta.vehicles[i]
+        document.getElementById('mylistElement'+ i).innerHTML = JSON.stringify(vehiclesList[i], null, 4);
       }
       console.log(vehiclesList)
+      
 })
 }

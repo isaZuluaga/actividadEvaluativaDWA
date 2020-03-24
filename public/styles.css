@@ -50,7 +50,9 @@ mySoatList:nth-child(2n+3) {background: #CCC} */
   background-color: whitesmoke;
   border: solid 1px;
   width: 100%;
-  height: 40px;
+  height: 100px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 0.4em;
 }
 #mysoatHeader{
   display: flex;

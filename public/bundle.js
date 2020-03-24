@@ -24,7 +24,7 @@ function createList() {
   document.getElementById('mysoatListContainer').appendChild(soatList);
 }
 function addSoatListElement() {
-  for (var i = 1; i <= 5; i++) {
+  for (var i = 0; i <= 4; i++) {
     var listElement = document.createElement('li');
     listElement.id = 'mylistElement' + i;
     listElement.className = 'mylistElement';
@@ -38,8 +38,9 @@ function peticion() {
   }).then(function (respuesta) {
     var vehiclesList = []; // let element = respuesta.vehicles[0]
 
-    for (var i = 1; i <= 5; i++) {
+    for (var i = 0; i <= 4; i++) {
       vehiclesList[i] = respuesta.vehicles[i];
+      document.getElementById('mylistElement' + i).innerHTML = JSON.stringify(vehiclesList[i], null, 4);
     }
 
     console.log(vehiclesList);
