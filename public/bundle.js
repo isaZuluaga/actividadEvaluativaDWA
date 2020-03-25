@@ -42,20 +42,12 @@ function addTableData() {
   }
 }
 function addTableData1() {
-  // let dates = [];
-  // dates = validarSoat
   for (var i = 4; i <= 7; i++) {
     var tdElement = document.createElement('td');
     tdElement.id = 'mytdElement' + i;
     tdElement.className = 'mytdElement';
     console.log(tdElement.id);
-    document.getElementById('mylistElement1').appendChild(tdElement); // if(cantMeses == 12){
-    //   console.log('SOAT valido')
-    //   //document.getElementsByClassName("mylistElement").style.backgroundColor ="#FFADA6";
-    // }else{
-    //   console.log('SOAT invalido')
-    // // document.getElementsByClassName("mylistElement").style.backgroundColor ="#BEFFA8";
-    // }
+    document.getElementById('mylistElement1').appendChild(tdElement);
   }
 }
 function addTableData2() {
@@ -118,9 +110,9 @@ function validarSoat(date1, date2) {
   console.log('la cantidad de meses es ' + cantMeses);
 
   if (cantMeses == 12) {
-    console.log('SOAT valido'); //document.getElementsByClassName("mylistElement").style.backgroundColor ="#FFADA6";
+    console.log('SOAT valido');
   } else {
-    console.log('SOAT invalido'); // document.getElementsByClassName("mylistElement").style.backgroundColor ="#BEFFA8";
+    console.log('SOAT invalido');
   }
 
   var fechas = [convdataTime1, convdataTime2, cantMeses];
@@ -149,58 +141,30 @@ function peticion() {
       }
     }
 
-    document.getElementById('mytdElement0').innerHTML = JSON.stringify(vehiclesList[0].brand);
-    document.getElementById('mytdElement4').innerHTML = JSON.stringify(vehiclesList[1].brand);
-    document.getElementById('mytdElement9').innerHTML = JSON.stringify(vehiclesList[2].brand);
-    document.getElementById('mytdElement13').innerHTML = JSON.stringify(vehiclesList[3].brand);
-    document.getElementById('mytdElement17').innerHTML = JSON.stringify(vehiclesList[4].brand);
-    document.getElementById('mytdElement1').innerHTML = JSON.stringify(vehiclesList[0].licensePlate);
-    document.getElementById('mytdElement5').innerHTML = JSON.stringify(vehiclesList[1].licensePlate);
-    document.getElementById('mytdElement10').innerHTML = JSON.stringify(vehiclesList[2].licensePlate);
-    document.getElementById('mytdElement14').innerHTML = JSON.stringify(vehiclesList[3].licensePlate);
-    document.getElementById('mytdElement18').innerHTML = JSON.stringify(vehiclesList[4].licensePlate);
-    document.getElementById('mytdElement2').innerHTML = JSON.stringify(vehiclesList[0].soatValidFrom);
-    document.getElementById('mytdElement6').innerHTML = JSON.stringify(vehiclesList[1].soatValidFrom);
-    document.getElementById('mytdElement11').innerHTML = JSON.stringify(vehiclesList[2].soatValidFrom);
-    document.getElementById('mytdElement15').innerHTML = JSON.stringify(vehiclesList[3].soatValidFrom);
-    document.getElementById('mytdElement19').innerHTML = JSON.stringify(vehiclesList[4].soatValidFrom);
-    document.getElementById('mytdElement3').innerHTML = JSON.stringify(vehiclesList[0].soatValidUntil);
-    document.getElementById('mytdElement7').innerHTML = JSON.stringify(vehiclesList[1].soatValidUntil);
-    document.getElementById('mytdElement12').innerHTML = JSON.stringify(vehiclesList[2].soatValidUntil);
-    document.getElementById('mytdElement16').innerHTML = JSON.stringify(vehiclesList[3].soatValidUntil);
-    document.getElementById('mytdElement20').innerHTML = JSON.stringify(vehiclesList[4].soatValidUntil);
+    var numbersBrand = [0, 4, 9, 13, 17];
+    var numbersLicense = [1, 5, 10, 14, 18];
+    var numbersFrom = [2, 6, 11, 15, 19];
+    var numbersUntil = [3, 7, 12, 16, 20];
+    var numB = null;
+    var numL = null;
+    var numF = null;
+    var numU = null;
+
+    for (var _k = 0; _k <= 4; _k++) {
+      numB = numbersBrand[_k];
+      document.getElementById('mytdElement' + numB).innerHTML = JSON.stringify(vehiclesList[_k].brand);
+      numL = numbersLicense[_k];
+      document.getElementById('mytdElement' + numL).innerHTML = JSON.stringify(vehiclesList[_k].licensePlate);
+      numF = numbersFrom[_k];
+      document.getElementById('mytdElement' + numF).innerHTML = JSON.stringify(vehiclesList[_k].soatValidFrom);
+      numU = numbersUntil[_k];
+      document.getElementById('mytdElement' + numU).innerHTML = JSON.stringify(vehiclesList[_k].soatValidUntil);
+    }
+
     console.log(vehiclesList);
     return vehiclesList;
   });
-} //   export function createList() {
-//     var soatList = document.createElement('ul');
-//     soatList.id ='mySoatList';
-//     soatList.className = 'mySoatListClass';
-//     document.getElementById('mysoatListContainer').appendChild(soatList);
-//   }
-//   export function addSoatListElement(){
-//     for(let i = -1; i<=4; i++){
-//       var listElement = document.createElement('li');
-//       listElement.id = 'mylistElement'+ i;
-//       listElement.className = 'mylistElement';
-//       console.log(listElement.id);
-//       document.getElementById('mySoatList').appendChild(listElement);
-//     }
-//   }
-// export function peticion(){
-// fetch('https://dwaapi.juvasquez88.now.sh/soatdwa')
-// .then(respuesta => respuesta.json() )
-// .then(respuesta => {
-//     let vehiclesList =[];
-//     for(let i = 0; i<=4; i++){
-//         vehiclesList[i] = respuesta.vehicles[i]
-//         // document.getElementById('mylistElement'+ i).innerHTML = JSON.stringify(vehiclesList[i]);
-//         document.getElementById('mylistElement'+ i).innerHTML = ('     '+JSON.stringify(vehiclesList[i].brand)+'     '+JSON.stringify(vehiclesList[i].licensePlate)+'     '+JSON.stringify(vehiclesList[i].soatValidFrom)+'     '+JSON.stringify(vehiclesList[i].soatValidUntil) );
-//       }
-//       return vehiclesList
-//       console.log(vehiclesList)
-// })
-// }
+}
 
 var $app = document.getElementById('app');
 var soat = addSoatList();

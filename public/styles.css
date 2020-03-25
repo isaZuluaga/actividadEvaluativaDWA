@@ -40,23 +40,18 @@ align-items: center;
 }
 #mySoatList{
   list-style: none;
-/* background-color: chartreuse; */
   width: 1300px;
   height: 40px;
 }
 
 .mylistElement{
-  /* background-color: #FFADA6; */
   border: solid 1px black;
   width: 100%;
   height: 100px;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 0.4em;
 }
-/* #mylistElement1{
-  background-color: #BEFFA8;
 
-} */
 #mysoatHeader{
   display: flex;
   justify-content: center;
