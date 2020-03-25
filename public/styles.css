@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: whitesmoke;
+  background-color: white;
 }
 .text{
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -44,16 +44,19 @@ align-items: center;
   width: 1300px;
   height: 40px;
 }
-/* mySoatList:first-child {background: #FF0}
-mySoatList:nth-child(2n+3) {background: #CCC} */
+
 .mylistElement{
-  background-color: whitesmoke;
-  border: solid 1px;
+  /* background-color: #FFADA6; */
+  border: solid 1px black;
   width: 100%;
   height: 100px;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 0.4em;
 }
+/* #mylistElement1{
+  background-color: #BEFFA8;
+
+} */
 #mysoatHeader{
   display: flex;
   justify-content: center;
@@ -66,4 +69,21 @@ mySoatList:nth-child(2n+3) {background: #CCC} */
   font-family: "Comic Sans MS", cursive, sans-serif;
   color: whitesmoke;
   font-size: 0.5em;
+}
+
+#mylistElement-1{
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: azure;
+  font-size: 0.6em;
+  background-color: gray;
+  height: 60px;
+}
+
+.mythElement{
+  border: solid 1px black;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: azure;
+  font-size: 0.6em;
+  background-color: gray;
+  height: 60px;
 }
